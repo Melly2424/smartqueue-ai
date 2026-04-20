@@ -1,0 +1,1 @@
+I learned how to combine HTML, CSS, and JavaScript with AI concepts to solve a real-world problem. One challenge I faced was designing a system that was simple but still realistic. AI helped me generate ideas and structure my project. This experience improved my technical and problem solving skills.
