@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartQueue AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SmartQueue AI</h1>
+  <p>Reducing wait times using AI-powered predictions</p>
+</header>
+
+<nav>
+  <a href="#problem">Problem</a>
+  <a href="#solution">Solution</a>
+  <a href="#implementation">Implementation</a>
+  <a href="#impact">Impact</a>
+  <a href="#ethics">Ethics</a>
+</nav>
+
+<section id="problem">
+  <h2>Problem</h2>
+  <p>Many small businesses struggle with long wait times and poor queue management. Customers often leave due to uncertainty.</p>
+  <img src="images/queue.jpg" alt="People waiting in line">
+</section>
+
+<section id="solution">
+  <h2>AI Solution</h2>
+  <p>SmartQueue AI predicts wait times using real-time data like number of customers, service speed, and staff availability.</p>
+  <img src="images/ai-diagram.png" alt="AI workflow diagram">
+</section>
+
+<section id="implementation">
+  <h2>Implementation Plan</h2>
+  <p>The system uses JavaScript to simulate AI predictions.</p>
+
+  <div class="calculator">
+    <h3>Wait Time Estimator</h3>
+    <input type="number" id="people" placeholder="People ahead">
+    <input type="number" id="time" placeholder="Avg service time (min)">
+    <input type="number" id="staff" placeholder="Staff available">
+    <button onclick="calculateWait()">Calculate</button>
+    <p id="result"></p>
+  </div>
+
+  <img src="images/dashboard.png" alt="Dashboard example">
+</section>
+
+<section id="impact">
+  <h2>Impact</h2>
+  <p>This solution improves customer satisfaction, reduces overcrowding, and helps businesses operate more efficiently.</p>
+  <img src="images/shop.jpg" alt="Small business">
+</section>
+
+<section id="ethics">
+  <h2>Ethics & Challenges</h2>
+  <p>Challenges include data privacy, prediction accuracy, and system reliability. AI must be used responsibly.</p>
+</section>
+
+<footer>
+  <p>© 2026 SmartQueue AI Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #34495e;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin-top: 10px;
+}
+
+.calculator {
+  margin-top: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 5px;
+  }function calculateWait() {
+  let people = document.getElementById("people").value;
+  let time = document.getElementById("time").value;
+  let staff = document.getElementById("staff").value;
+
+  if (people && time && staff) {
+    let wait = (people * time) / staff;
+    document.getElementById("result").innerText =
+      "Estimated Wait Time: " + wait + " minutes";
+  } else {
+    document.getElementById("result").innerText =
+      "Please fill all fields.";
+  }
+}
+}
